@@ -1,0 +1,6 @@
+{
+    "backendUrl" : "https://api.thebestapp.io",
+    "feature1enabled" : "true",
+    "feature2enabled" : "true"
+
+}

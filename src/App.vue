@@ -1,17 +1,36 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <button v-on:click="sendData()">SEND DATA TO BACKEND!</button>
+    <div v-if="feature1Enabled()">
+      FEATURE 1 IS ENABLED
+    </div>
+    <div v-if="feature2Enabled()">
+      FEATURE 2 IS ENABLED
+    </div>:
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import config from './config/config.json'
 export default {
   name: 'app',
-  components: {
-    HelloWorld
+  components:
+  {
+  },
+  methods:
+  {
+    sendData()
+    {
+      alert(`sending data to ${config.backendUrl}`)
+    },
+    feature1Enabled()
+    {
+      return config.feature1enabled === "true"
+    },
+    feature2Enabled()
+    {
+      return config.feature2enabled === "true"
+    },
   }
 }
 </script>

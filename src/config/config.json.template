@@ -1,0 +1,6 @@
+{
+    "backendUrl" : "%%BACKEND_URL%%",
+    "feature1enabled" : "%%FEATURE1_ENABLED%%",
+    "feature2enabled" : "%%FEATURE2_ENABLED%%"
+
+}
